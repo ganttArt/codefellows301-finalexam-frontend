@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Form from './components/add-item.js';
 import Items from './components/items.js';
+import {Jumbotron} from 'react-bootstrap';
 
 const API_SERVER = process.env.REACT_APP_API;
 
@@ -43,12 +44,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Jumbotron>
         <h1>Our Items</h1>
         <Form handleAddItem={this.addItem} />
         <hr />
         <Items handleDelete={this.deleteItem} itemsList={this.state.items} />
-      </div>
+      </Jumbotron>
     );
   }
 }
