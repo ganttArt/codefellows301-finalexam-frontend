@@ -25,7 +25,8 @@ class UpdateItemForm extends React.Component {
   render() {
 
     return (
-      <form data-testid={`update-form-${this.props.item.name}`} onSubmit={this.handleChange}>
+      <form data-testid={`update-form-${this.props.item.name}`} onSubmit={this.handleSubmit}>
+      {/* changed the onSubmit from handleChange to handleSubmit */}
         <input data-testid={`update-field-${this.props.item.name}`} name="notes" placeholder="Add Notes" onChange={this.handleChange} />
         <button type="submit">Update Item</button>
       </form>
