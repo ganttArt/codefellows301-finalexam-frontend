@@ -48,7 +48,12 @@ class App extends React.Component {
         <h1>Our Items</h1>
         <Form handleAddItem={this.addItem} />
         <hr />
-        <Items handleDelete={this.deleteItem} itemsList={this.state.items} />
+        <Items
+          handleDelete={this.deleteItem}
+          itemsList={this.state.items}
+          handleUpdate={this.updateItem}
+          // added handleUpdate
+        />
       </Jumbotron>
     );
   }
